@@ -1,6 +1,6 @@
 resource "aws_db_instance" "mysql" {
   allocated_storage    = 10
-  db_name              = "roboshop.${var.ENV}.mysql"
+  db_name              = "roboshop-${var.ENV}-mysql"
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
@@ -24,6 +24,6 @@ resource "aws_db_subnet_group" "mysql" {
 
 resource "aws_db_parameter_group" "default" {
   name   = "roboshop-${var.ENV}-mysql-pg"
-  family = "mysql5.6"
+  family = "mysql5.7"
 
   }
