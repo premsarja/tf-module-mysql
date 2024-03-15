@@ -5,7 +5,7 @@ resource "aws_security_group" "allows_mysql" {
   vpc_id =   data.terraform_remote_state.vpc.outputs.VPC_ID 
 
   ingress {
-    description = "redis  from private network "
+    description = "mysql  from private network "
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
