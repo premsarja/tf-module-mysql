@@ -1,5 +1,6 @@
 
 resource "null_resource" "schema" {
+  depends_on = [aws_db_instance.RDS]  
   provisioner "local-exec" {
           command = <<EOF
             cd /tmp      
