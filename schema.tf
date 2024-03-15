@@ -8,7 +8,7 @@ resource "null_resource" "schema" {
       curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
       unzip -o /tmp/mysql.zip 
       cd mysql-main
-      mysql -h ${aws_db_instance.mysql.address} -uprem -ppremsagar < shipping.sql
+      mysql -h roboshop-dev-mysql.cf6ic4gs8isj.us-east-1.rds.amazonaws.com -uprem -ppremsagar < shipping.sql
 EOF
   }
 }
