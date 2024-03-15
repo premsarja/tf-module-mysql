@@ -1,5 +1,5 @@
 
-resource "aws_security_group" "allows_mysql" {
+resource "aws_security_group" "mysql" {
   name        = "mysql allows internal traffic"
   description = "Allow private traffics"
   vpc_id =   data.terraform_remote_state.vpc.outputs.VPC_ID 
