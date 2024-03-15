@@ -17,10 +17,12 @@ resource "aws_security_group" "allows_mysql" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+
   }
 
   tags = {
-    Name = "roboshop-${var.ENV}-mysql-sg   "
+    Name = "roboshop-${var.ENV}-mysql-sg"
   }
 }
 
