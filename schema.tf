@@ -8,6 +8,6 @@ provisioner "local-exec" {
       unzip -o /tmp/mysql.zip
       cd mysql-main
       mysql -h ${aws_db_instance.mysql.address} -uprem -ppremsagar < shipping.sql
-    EOF
+  EOF
   }
 }
